@@ -27,7 +27,7 @@ namespace _2_3_geometriska_figurer
                 return Math.PI * Math.Sqrt(2 * a * a + 2 * b * b);
             }
         }
-        //Skapar konstruktorn som ärver ifrån basklassen
+        //Skapar konstruktorn som ärver ifrån shape klassen
         public Ellipse( double lenght, double width) : base(lenght, width)
         {
 

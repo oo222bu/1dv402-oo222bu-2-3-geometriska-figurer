@@ -57,7 +57,7 @@ namespace _2_3_geometriska_figurer
         //Metod som returnerar värdet på figuren
         public override string ToString()
         {
-            return string.Format("Längd : {0,5} \nBredd : {1,5] \nOmkretts : {2,5} \nArea : {3,5}", Length, Width, Perimeter, Area);
+            return string.Format("\nLängd  :\t{0,10}\nBredd  :\t{1,10}\nOmkrets:\t{2,10:f1}\nArea   :\t{3,10:f1}", Length, Width, Perimeter, Area);
             
         }
        

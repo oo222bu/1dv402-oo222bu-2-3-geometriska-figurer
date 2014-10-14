@@ -15,14 +15,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="_2_3_geometriska_figurer.Ellipse">
-    <Position X="7.5" Y="0.5" Width="2.75" />
+    <Position X="6.5" Y="4.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Ellipse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2_3_geometriska_figurer.Rectangle">
-    <Position X="10.75" Y="0.5" Width="3" />
+    <Position X="2.75" Y="4.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Rectangle.cs</FileName>

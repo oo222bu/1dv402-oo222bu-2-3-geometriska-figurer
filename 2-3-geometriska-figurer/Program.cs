@@ -17,11 +17,6 @@ namespace _2_3_geometriska_figurer
                 try
                 {
                     int menu = int.Parse(Console.ReadLine());
-                    if (menu < 0 || menu > 2)
-                    {
-                        throw new ArgumentException();
-                    }
-
 
                     switch (menu)
                     {
@@ -31,6 +26,8 @@ namespace _2_3_geometriska_figurer
                             break;
                         case 2: ViewShapeDetail(CreateShape(ShapeType.Rectangle));
                             break;
+                        default:
+                            throw new ArgumentException();
                     }
                 }
                 catch
@@ -63,13 +60,11 @@ namespace _2_3_geometriska_figurer
             double width = ReadDoubleGreaterThanZero("Ange bredd:");
             if (shapeType == ShapeType.Rectangle)
             {
-                Rectangle firstRectangle = new Rectangle(length, width);
-                return firstRectangle;
+                return new Rectangle(length, width);
             }
             else
             {
-                Ellipse firstEllipse = new Ellipse(length, width);
-                return firstEllipse;
+                return  new Ellipse(length, width);
             }
         }           
         //Statisk metod som ska visa en meny.
@@ -83,11 +78,11 @@ namespace _2_3_geometriska_figurer
             Console.WriteLine("==============================================================");
             Console.WriteLine();
             Console.ResetColor();
-            Console.WriteLine("0. Avsluta.");
-            Console.WriteLine("\n1. Ellips.");
-            Console.WriteLine("\n2. Rectangel.");
+            Console.WriteLine(" 0. Avsluta.");
+            Console.WriteLine("\n 1. Ellips.");
+            Console.WriteLine("\n 2. Rectangel.");
             Console.WriteLine("\n==============================================================");
-            Console.Write("\nAnge menyval [0-2]:");
+            Console.Write("\n Ange menyval [0-2]:");
         }
         //Statisk metod som presenterar figurens detaljer.
         private static void ViewShapeDetail(Shape shape) 
@@ -98,7 +93,10 @@ namespace _2_3_geometriska_figurer
             Console.WriteLine("==============================================================");
             Console.ResetColor();
             Console.WriteLine(shape.ToString());
-            Console.WriteLine("==============================================================");
+            Console.WriteLine("\n==============================================================");
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("\n Tryck tangent för att fortsätta");
+            Console.ResetColor();
         }
         //metod som ska returnera ett värde av typen double
         private static double ReadDoubleGreaterThanZero(string prompt) 
